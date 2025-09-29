@@ -165,3 +165,19 @@ a:hover, a:focus, a:active {
 #paperlist a, a:hover, a:focus, a:active {
   color: darkblue;
 } 
+
+.paper-title {
+  color: #3366cc; /* blue */
+}
+
+.paper-authors {
+  /* color: #000; standard */
+}
+
+.paper-journal {
+  color: #ff0000; /* red */
+}
+
+.list-group-item{
+  color: #868e96;
+}
