@@ -161,3 +161,7 @@ a {
 a:hover, a:focus, a:active {
   color: #6effff;
 }
+
+#paperlist a, a:hover, a:focus, a:active {
+  color: darkblue;
+} 
