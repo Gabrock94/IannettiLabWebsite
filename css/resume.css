@@ -56,7 +56,7 @@ h2 {
 }
 
 .list-icons .list-inline-item i:hover {
-  color: #00b2cc;
+  color: #626464;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -147,11 +147,11 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #00b2cc !important;
+  background-color: #202b31 !important;
 }
 
 .text-primary {
-  color: #00b2cc !important;
+  color: #1fc7c7 !important;
 }
 
 a {
@@ -163,7 +163,7 @@ a:hover, a:focus, a:active {
 }
 
 #paperlist a, a:hover, a:focus, a:active {
-  color: darkblue;
+  color: rgb(32, 32, 44);
 } 
 
 .publicationyear{
@@ -177,13 +177,33 @@ a:hover, a:focus, a:active {
 }
 
 .paper-authors {
-  color: #3c3a3a; standard */
+  color: #3c3a3a; 
+}
+
+.paper-note {
+  color: gray; 
 }
 
 .paper-journal {
-  color: #ff0000; /* red */
+  color: #cb3232; /* red */
 }
 
 .list-group-item{
   color: #868e96;
+}
+
+.paper-bracket {
+  color: #000;
+}
+
+#jointhelab {
+  color: #000000; /* nero */
+}
+
+#jointhelab p {
+  color: #000000; /* nero per i paragrafi */
+}
+
+#jointhelab h3, #jointhelab h4 {
+  color: #343a40; /* grigio scuro per i titoli, come gli altri h3/h4 */
 }
