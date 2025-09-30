@@ -207,3 +207,11 @@ a:hover, a:focus, a:active {
 #jointhelab h3, #jointhelab h4 {
   color: #343a40; /* grigio scuro per i titoli, come gli altri h3/h4 */
 }
+
+footer {
+  color: lightgray;
+}
+
+footer a, a:hover, a:active, a:focus{
+  color:white;
+}
