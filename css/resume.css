@@ -56,7 +56,7 @@ h2 {
 }
 
 .list-icons .list-inline-item i:hover {
-  color: #626464;
+  color: #3366cc;
 }
 
 #sideNav .navbar-nav .nav-item .nav-link {
@@ -212,6 +212,6 @@ footer {
   color: lightgray;
 }
 
-footer a, a:hover, a:active, a:focus{
+footer a, footer a:hover, footer a:active, footer a:focus{
   color:white;
 }
