@@ -151,7 +151,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .text-primary {
-  color: #0055ff !important;
+  color: #3366cc !important;
 }
 
 a {
@@ -159,7 +159,7 @@ a {
 }
 
 a:hover, a:focus, a:active {
-  color: #0055ff;
+  color: #3366cc;
 }
 
 #paperlist a, a:hover, a:focus, a:active {
