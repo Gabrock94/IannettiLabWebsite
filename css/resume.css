@@ -44,7 +44,7 @@ h2 {
 }
 
 .list-social-icons a:hover {
-  color: #00b2cc;
+  color: #3366cc;
 }
 
 .list-social-icons a .fa-lg {
@@ -151,15 +151,15 @@ section.resume-section .resume-item .resume-date {
 }
 
 .text-primary {
-  color: #1fc7c7 !important;
+  color: #0055ff !important;
 }
 
 a {
-  color: #00b2cc;
+  color: #3366cc;
 }
 
 a:hover, a:focus, a:active {
-  color: #6effff;
+  color: #0055ff;
 }
 
 #paperlist a, a:hover, a:focus, a:active {
