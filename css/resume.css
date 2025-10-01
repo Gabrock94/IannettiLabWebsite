@@ -222,3 +222,7 @@ footer a, footer a:hover, footer a:active, footer a:focus{
 #people a:active {
   color: gray;
 }
+
+#home {
+    position: relative;
+}
