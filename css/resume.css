@@ -147,7 +147,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
-  background-color: #202b31 !important;
+  background-color: #35464f !important;
 }
 
 .text-primary {
@@ -197,11 +197,11 @@ a:hover, a:focus, a:active {
 }
 
 #jointhelab {
-  color: #000000; /* nero */
+  color: gray; /* nero */
 }
 
 #jointhelab p {
-  color: #000000; /* nero per i paragrafi */
+  color: gray; /* nero per i paragrafi */
 }
 
 #jointhelab h3, #jointhelab h4 {
@@ -214,4 +214,11 @@ footer {
 
 footer a, footer a:hover, footer a:active, footer a:focus{
   color:white;
+}
+
+#people a,
+#people a:hover,
+#people a:focus,
+#people a:active {
+  color: gray;
 }
