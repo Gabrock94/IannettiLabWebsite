@@ -151,7 +151,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .text-primary {
-  color: #3366cc !important;
+  color: #000000 !important;
 }
 
 a {
@@ -243,4 +243,29 @@ footer a, footer a:hover, footer a:active, footer a:focus{
     height: 100%;
 }
 
+.lab-blue {
+    color: #007bff !important; 
+  }
+
+ 
+  /* Target only buttons inside the software section */
+  #software .btn-outline-primary {
+    color: black !important;
+    border-color: #000000; /* Keep Bootstrap’s blue outline */
+  }
+
+  #software .btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: white !important;
+  }
+
+  /* Ensure any links inside the buttons are also black */
+  #software .btn-outline-primary a {
+    color: black !important;
+    text-decoration: none;
+  }
+
+  #software .btn-outline-primary:hover a {
+    color: white !important;
+  }
 
