@@ -121,13 +121,13 @@ function generateWave() {
         // Prima metà = picco positivo
         if (spikeProgress < spikeDuration / 2) {
             const spikeCurve = Math.sin((spikeProgress / (spikeDuration / 2)) * Math.PI);
-            y += spikeCurve * spikeHeight; 
+            y -= spikeCurve * spikeHeight; 
         } 
         // Seconda metà = picco negativo
         else {
             const localProgress = spikeProgress - spikeDuration / 2;
             const spikeCurve = Math.sin((localProgress / (spikeDuration / 2)) * Math.PI);
-            y -= spikeCurve * spikeHeight;
+            y += spikeCurve * spikeHeight;
         }
         spikeProgress++;
     } else {
