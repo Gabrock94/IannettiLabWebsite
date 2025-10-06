@@ -1229,19 +1229,169 @@ draw();
     </section> 
 
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="software">
-            <div class="my-auto">
-              <h2 class="mb-2">Software</h2>
+      <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="software">
+      <div class="my-auto">
+        <h2 class="mb-2">Software</h2>
 
-              <div class="resume-item d-flex flex-column flex-md-row mb-3">
-                <div class="resume-content mr-auto">
-                  <h4>Have a look at our tools</h4>
-                  <p>
-                    "The best carbonara is the one you make at home". Therefore, here are a couple of tools we created to make our lives easier.
+        <div class="resume-item d-flex flex-column flex-md-row mb-3">
+          <div class="resume-content mr-auto">
+            <h4>Have a look at our tools</h4>
+            <p>
+              "The best carbonara is the one you make at home." Therefore, here are a couple of tools we created to make our lives easier.
+            </p>
+
+            <!-- 🔹 Bottone per aprire il modale -->
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#lsaModal">
+              Local Spatial Analysis (LSA) filter
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#STEPToolbox">
+              STEP Toolbox
+            </button>
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#autocleaning">
+              <a href= "https://github.com/rsomervail/dusk2dawn/wiki" target= "_blank" >EEG AutoCleaning with ASR</a> 
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔹 Modale dettagliato per LSA -->
+      <div class="modal fade" id="lsaModal" tabindex="-1" aria-labelledby="lsaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title fw-bold" id="lsaModalLabel">Local Spatial Analysis (LSA) </h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+              <p>
+                This is an easy-to-use and conceptually simple adaptive EEG filter, designed to highlight local components that are masked by large widespread activity.
+                At each timepoint, it attempts to regress out the trial-by-trial variability of widespread stimulus-evoked neural activity.
+                In this way, it can uncover underlying local components if certain assumptions are met.
+              </p>
+
+              <p>
+                LSA is available as an EEGLAB plugin here:
+                <br>
+                <a href="#">[Download EEGLAB plugin]</a><br>
+                <a href="#">[Plugin Tutorial]</a>
+              </p>
+
+              <p>
+                This method has been published as
+                <a href="pdfs/lsa.pdf" target="_blank">Bufacchi et al. (2021)</a>.
+              </p>
+
+              <div class="row my-4">
+                <div class="col-md-6 text-center">
+                  <p class="fw-semibold mb-2">Example procedure for filtering EEG data using LSA:</p>
+                  <img src="img/lsa1.png" alt="Example procedure for filtering EEG data using LSA" class="img-fluid rounded shadow">
+                  
+                  <p class="small text-muted mt-2">
+                    <strong>Step 1:</strong><br>
+                    First, the electrode at which the widespread N2 component is maximal in amplitude is identified in the grand average scalpmap series. In this example, the electrode is Cz. Second, the time interval including the widespread signal (i.e. the interval during which most electrodes have the same polarity) is selected. In this example, the interval is 130-220 ms.
+                  </p>
+
+                  <div style="margin-bottom: 20px;"></div>
+
+                  <p class="small text-muted mt-2">
+                    <strong>Step 2:</strong><br>
+                    LSA exploits the different trial-by-trial variability of the local vs the widespread component, and thereby removes the activity from the identified electrode (Cz) from all other electrodes. This is done separately for each subject and time point. The last row shows the comparison of the topography at the same time point (in this example, 160 ms) before and after filtering with LSA. Color bars represent voltage (µV).
                   </p>
                 </div>
-              </div> 
+
+                <div class="col-md-6 text-center">
+                  <p class="fw-semibold mb-2">Example performance of LSA on simulated ERP data containing a central widespread component and a lateralised local component:</p>
+                  <img src="img/lsa2.png" alt="Example performance of LSA on simulated ERP data" class="img-fluid rounded shadow">
+                  
+                  <p class="small text-muted mt-2">
+                    <strong>Left panel:</strong> EEG topographies were generated as a widespread component at Cz plus a local negative component at C3. 
+                    <strong>Right panel:</strong> By exploiting the information contained in the trial-by-trial variability of the simulated data, LSA returns a scalp topography virtually identical to that of the original local component. Commonly-used stationary filters (Vertex Reference, Average Reference, Surface Laplacian) failed to highlight the local component. Only the Contralateral Difference returned a negativity in the left hemisphere, although it also created a spurious positivity in the contralateral hemisphere. Color bars represent voltage (µV).
+                  </p>
+                </div>
+              </div>
+
+
+              <hr>
+
+              <p class="fw-semibold mb-2">A quick video tutorial for using the plugin is available here:</p>
+              <div class="ratio ratio-16x9 mb-3">
+                <iframe
+                  src="https://www.youtube.com/embed/-Il3Qhfurnk"
+                  title="LSA Tutorial Video"
+                  allowfullscreen>
+                </iframe>
+              </div>
             </div>
-      </section>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 🔹 Modale dettagliato per ERP Cleaner -->
+      <div class="modal fade" id="STEPToolbox" tabindex="-1" aria-labelledby="STEPToolboxLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h4 class="modal-title fw-bold" id="STEPToolboxLabel">Single-Trial Toolbox</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+              <p>
+                In 2010 we developed a method for the automatic estimation of the latency and amplitude of the N1 wave of laser-evoked potentials (LEPs) in single trials (for the full text of the publication describing this method [Hu et al, "A novel approach for enhancing the signal-to-noise ratio and detecting automatically event-related potentials (ERPs) in single trials", NeuroImage 2010], click&nbsp;<a href="pdfs/a_novel_approach_for.pdf" target="_blank">here</a>).
+                The approach, summarized in the figure below, consists of two consecutive steps: wavelet filtering and multiple linear regression. 
+              </p>
+
+              <p>
+                STEP 1 is a free software for the automatic and unbiased extraction of different features of EEG signals in the time domain. 
+                STEP1 includes and expands the features of our previous 'N1measure' algorithm (which is now obsolete).
+                It is useful both for measuring single-trial stimulus-evoked potentials and epileptiform activities in the human EEG. The full-length paper (Hu et al "Taking into account latency, amplitude and morphology: improved estimation of single-trial ERPs by wavelet filtering and multiple linear regression", Technical Report in Journal of Neurophysiology 2011) describing the approach can be downloaded <a href="pdfs/2011-hu_et_al_jneurophysiol.pdf" target="_blank">here</a>.
+
+              </p>
+
+              <p>
+              Please download the toolbox (.rar) from <a href="rar/step.rar" target="_blank">here</a>. The .rar archive also contains a user manual.
+              </p>
+
+           <p class="fw-semibold mb-2">
+              Flowchart describing the procedure developed to enhance the signal-to-noise ratio of the N1 wave of LEPs (top panel),
+              and to measure automatically its peak latency and amplitude in single trials (bottom panel).
+            </p>
+
+            <!-- Riga con immagine a sinistra e testo a destra -->
+            <div class="row align-items-start my-4">
+              <!-- Immagine -->
+              <div class="col-md-6 text-center">
+                <img src="img/step1.jpg" class="img-fluid rounded shadow" alt="Flowchart">
+              </div>
+
+              <!-- Testo a destra -->
+              <div class="col-md-6">
+                <p class="small text-muted mt-2">
+                  <strong>Top panel:</strong> A time-frequency representation is obtained from the group average waveform, using a continuous wavelet transform (CWT) (1), and a wavelet filter is generated by thresholding this time-frequency representation (2). This filter is applied (3) to the time-frequency representation obtained from single-trial LEP responses (4). Filtered single trial LEP responses are then reconstructed in the time-domain using an inverse CWT (ICWT) (5), and finally averaged (6). This procedure generates both single-trial (5) and averaged (6) LEP responses with enhanced signal-to-noise ratio.
+                </p>
+
+                <p class="small text-muted mt-2">
+                  <strong>Bottom panel:</strong> A multiple linear regression is applied to these single-trial LEPs with enhanced signal-to-noise ratio to obtain a fast and unbiased estimate of the peak latency and amplitude of N1 waves. A regressor and its temporal derivative (0 to 0.25 s post-stimulus) are obtained from the across-trial average waveform (7). This basis set is then regressed (8) against the corresponding time window of each single LEP trial, thus yielding (9) a latency and amplitude value for each N1 peak.
+                </p>
+              </div>
+            </div>
+
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+
             
 <footer class="text-center bg-dark">
 
