@@ -225,6 +225,23 @@ footer a, footer a:hover, footer a:active, footer a:focus{
 
 #home {
     position: relative;
+    min-height: 100vh;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 40%;
+    filter: blur(1px);
+    z-index: -1;
 }
 
 .brain-activity {
@@ -243,9 +260,10 @@ footer a, footer a:hover, footer a:active, footer a:focus{
     height: 100%;
 }
 
-.lab-blue {
-    color: #007bff !important; 
+.title-primary {
+    color: #3366cc !important; 
   }
+
 
  
   /* Target only buttons inside the software section */
@@ -268,4 +286,21 @@ footer a, footer a:hover, footer a:active, footer a:focus{
   #software .btn-outline-primary:hover a {
     color: white !important;
   }
+
+.responsive-img {
+  width: 100%;
+  max-width: 550px; /* massimo 550px per non ingrandirsi troppo */
+  height: auto;
+  border-radius: 8px;
+}
+.text-center {
+  text-align: center;
+}
+.mt-4 {
+  margin-top: 1.5rem;
+}
+.mb-5 {
+  margin-bottom: 3rem;
+}
+
 
