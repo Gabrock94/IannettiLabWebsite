@@ -235,12 +235,12 @@ footer a, footer a:hover, footer a:active, footer a:focus{
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('');
+    background-image: url('../img/3.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: 70% calc(100% - 80px); /* un po’ più a destra e più in alto */
     background-repeat: no-repeat;
-    background-size: 40%;
-    filter: blur(1px);
+    background-size: 50%;
+    filter: blur(0px);
     z-index: -1;
 }
 
