@@ -293,6 +293,26 @@ footer a, footer a:hover, footer a:active, footer a:focus{
     color: white !important;
   }
 
+    #jointhelab .btn-outline-primary {
+    color: #3366cc !important;
+    border-color: #000000; /* Keep Bootstrap’s blue outline */
+  }
+
+  #jointhelab .btn-outline-primary:hover {
+    background-color: #3366cc;
+    color: white !important;
+  }
+
+  /* Ensure any links inside the buttons are also black */
+  #jointhelab .btn-outline-primary a {
+    color: black !important;
+    text-decoration: none;
+  }
+
+  #jointhelab .btn-outline-primary:hover a {
+    color: white !important;
+  }
+
 .responsive-img {
   width: 100%;
   max-width: 550px; /* massimo 550px per non ingrandirsi troppo */
