@@ -244,6 +244,12 @@ footer a, footer a:hover, footer a:active, footer a:focus{
     z-index: -1;
 }
 
+@media (max-width: 768px) {
+    #home::before {
+        background-image: none;
+    }
+}
+
 .brain-activity {
     width: 100%;
     max-width: 300px;
